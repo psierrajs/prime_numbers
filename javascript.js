@@ -1,13 +1,11 @@
 //Code which outputs prime numbers in the interval from 2 to n.
+let val = 10;
 
-//let val = prompt("Please, type a number to try", 0);
-let num;
-function prime(num) {
- for (let i = 2; i < num; i++){
-    if (num % i == 0){
-    //prime = i;
-    console.log("not prime");
+//print values from 2 to numb
+keepChecking:
+for (let i = 2; i <= val; i++) {
+  for (let j = 2; j < i; j++){
+      if (i % j == 0) continue keepChecking;
     }
-  }
+    console.log(i);
 }
-prime(8);
